@@ -57,15 +57,15 @@ Move authoring method into `SPEC_METHOD.md`.
 
 Current preferred sequence:
 
-1. implement `FIRST_RUST_CLAIMANT_SCOPE.md`
-2. prove first claim target: `Core` over `HTTP Binding v1`
-3. reconsider `Recall v1`
+1. keep `Core` stable after two recorded `HTTP Binding v1` claimants
+2. implement `Core + Tools` over `HTTP Binding v1` in `starla-rs`
+3. port the same `Core + Tools` claim to `starla-ex`
 
 Immediate deliverables:
 
-1. create the first Rust claimant repo
-2. implement `FIRST_RUST_CLAIMANT_SCOPE.md`
-3. prove first claim target: `Core` over `HTTP Binding v1`
+1. freeze `Core + Tools` over `HTTP Binding v1` as a seeded claim
+2. implement the seeded `Core + Tools` claimant in `starla-rs`
+3. prove it with a standalone external runner
 
 Working sequencing rule:
 

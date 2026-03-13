@@ -15,7 +15,12 @@ Seed artifact:
 
 - `claim-template.md`
 - `core-http-claim-seed.md`
+- `core-tools-http-claim-seed.md`
 
 First seeded target:
 
 - `Core` over `HTTP Binding v1`
+
+Next seeded target:
+
+- `Core + Tools` over `HTTP Binding v1`

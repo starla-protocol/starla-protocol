@@ -109,14 +109,14 @@ Current v1 surface ownership and completeness.
 
 ## Current Priority
 
-1. review and accept first claimant report
+1. freeze and implement `Core + Tools` over `HTTP Binding v1`
 2. keep deferred boundaries deferred unless `V1_TARGET.md` is revised
 
 ## Next Deliverables
 
-1. review `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
-2. decide whether `starla-rs` `implement/core-http-claimant` is ready to merge
-3. only then broaden the claimant or bindings
+1. implement `conformance/v1/claims/core-tools-http-claim-seed.md` in `starla-rs`
+2. add an external runner path for `Core + Tools` over `HTTP Binding v1`
+3. record the first dated `Core + Tools` report
 
 ## Coherence Rules
 

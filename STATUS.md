@@ -4,6 +4,7 @@ Repository state: `Draft-Complete`
 Stable version: none
 Compliance claims:
 - `starla-rs` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
+- `starla-ex` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-ex-core-http-2026-03-13.md`
 First claim target: `Core` over `HTTP Binding v1`
 
 ## Read Order

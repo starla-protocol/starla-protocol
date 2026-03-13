@@ -6,6 +6,11 @@ cd "$repo_root"
 
 fail=0
 
+has_rg=0
+if command -v rg >/dev/null 2>&1; then
+  has_rg=1
+fi
+
 error() {
   printf 'lint: %s\n' "$*" >&2
   fail=1
@@ -20,7 +25,11 @@ require_pattern() {
   local path="$1"
   local pattern="$2"
   local label="$3"
-  rg -q "$pattern" "$path" || error "$path missing $label"
+  if (( has_rg != 0 )); then
+    rg -q "$pattern" "$path" || error "$path missing $label"
+  else
+    grep -Eq "$pattern" "$path" || error "$path missing $label"
+  fi
 }
 
 for path in \
@@ -62,7 +71,13 @@ forbidden_paths=(
 check_forbidden() {
   local pattern="$1"
   local label="$2"
-  if rg -n "$pattern" "${forbidden_paths[@]}" >/tmp/starla-lint-match.$$ 2>/dev/null; then
+  rm -f /tmp/starla-lint-match.$$
+  if (( has_rg != 0 )); then
+    rg -n "$pattern" "${forbidden_paths[@]}" >/tmp/starla-lint-match.$$ 2>/dev/null || true
+  else
+    grep -EnR -- "$pattern" "${forbidden_paths[@]}" >/tmp/starla-lint-match.$$ 2>/dev/null || true
+  fi
+  if [[ -s /tmp/starla-lint-match.$$ ]]; then
     error "forbidden term: $label"
     cat /tmp/starla-lint-match.$$ >&2
   fi

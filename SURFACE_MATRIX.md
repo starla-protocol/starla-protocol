@@ -109,14 +109,14 @@ Current v1 surface ownership and completeness.
 
 ## Current Priority
 
-1. choose the next bounded claim target after `Core + Tools`
+1. freeze `Core + Approvals` over `HTTP Binding v1`
 2. keep deferred boundaries deferred unless `V1_TARGET.md` is revised
 
 ## Next Deliverables
 
-1. decide whether the next claim is `Core + Approvals`, `Core + Channels`, or another bounded target
-2. freeze the next claim seed and report seed
-3. implement that claim in one claimant before broadening to the second
+1. implement `conformance/v1/claims/core-approvals-http-claim-seed.md` in `starla-rs`
+2. add an external runner path for `Core + Approvals` over `HTTP Binding v1`
+3. record the first dated `Core + Approvals` report
 
 ## Coherence Rules
 

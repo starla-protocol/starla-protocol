@@ -1,6 +1,6 @@
 # Protocol Doc Rules
 
-These rules apply to files under `starla-protocol/`.
+These rules apply to this repository.
 
 ## Purpose
 
@@ -29,6 +29,16 @@ implementation and compliance review.
   intended.
 - Examples are informative by default and should be rare.
 
+## Determinism
+
+- Make protocol behavior as concrete and deterministic as possible.
+- Treat unspecified externally observable behavior as a defect to be fixed.
+- If a boundary is left implementation-defined, name it explicitly.
+- For each implementation-defined boundary, state what remains fixed at the protocol boundary and
+  what variability is allowed.
+- Non-normative success guidance is allowed for implementation-defined areas, but it must be marked
+  as guidance rather than law.
+
 ## Boundaries
 
 - Product intent belongs in Otto product docs.
@@ -44,3 +54,9 @@ implementation and compliance review.
   explanation.
 - Avoid synonyms for the same protocol noun or state.
 - If wording drift appears between protocol docs, normalize the wording instead of elaborating.
+
+## Guardrails
+
+- Register each new primary term in `VOCABULARY.md` before first normative use.
+- Review protocol-law changes against `SPEC_REVIEW_CHECKLIST.md`.
+- Run `./scripts/lint-docs.sh` after doc edits that affect law, bindings, or conformance.

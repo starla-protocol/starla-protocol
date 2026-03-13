@@ -1,0 +1,17 @@
+name: docs-lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Run docs lint
+        run: ./scripts/lint-docs.sh

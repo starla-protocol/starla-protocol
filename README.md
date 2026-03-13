@@ -1,114 +1,86 @@
 # starla-protocol
 
-This file is the repo-local source of truth for `starla-protocol` docs.
+`starla-protocol` is a draft protocol for the transport-independent semantics of a multi-agent
+harness, its transport bindings, and its conformance requirements.
 
-Protocol docs capture normative externally observable behavior. Otto may refer to this normative
-content as protocol law. Protocol docs are not product-definition essays, not implementation
-architecture notes, and not execution trackers.
+Otto is the current product and reference implementation targeting it.
 
-`starla-protocol` is the protocol.
-Otto is a product and reference implementation that targets it.
+## Status
 
-## Purpose
+- Repository state: `Draft-Complete`
+- Stable version: none
+- Compliance claims: none
+- First claim target: `Core` over `HTTP Binding v1`
 
-`starla-protocol` docs exist to define a versioned protocol clearly enough that:
+## Scope
 
-- multiple competent teams could implement materially similar externally observable behavior
-- a third party could determine compliance without asking the authors for intent
+- transport-independent core specification for multi-agent harness semantics
+- first-class protocol surfaces for context, tools, coordination, and channels where
+  interoperability requires them
+- HTTP binding
+- streaming binding
+- conformance requirements
 
-## Writing Standard
+## Authority Order
 
-- Keep protocol docs extremely terse.
-- Use the shortest wording that preserves exact meaning.
-- Prefer normative rules, state tables, invariants, and binding clauses over explanatory prose.
-- If text is explanatory rather than required for protocol law, move it to Otto product or design
-  docs.
-- Favor directional consistency across protocol docs over local elaboration.
+1. core specification
+2. bindings
+3. conformance
 
-## Law Boundary
+Bindings map the core specification onto transports. Conformance defines the evidence required for
+claims against that specification.
 
-- Enforce protocol law strictly at the semantic boundary.
-- Do not over-specify implementation detail unless an external guarantee depends on it.
-- If two compliant implementations can differ without breaking clients or interoperability, keep the
-  detail implementation-defined by default.
+## Read Order
 
-## Normative Language
+1. `CHARTER.md`
+2. `V1_TARGET.md`
+3. `FIRST_RUST_CLAIMANT_SCOPE.md`
+4. `WORKING_DECISIONS.md`
+5. `SURFACE_MATRIX.md`
+6. `VOCABULARY.md`
+7. `SPEC_LIFECYCLE.md`
+8. `drafts/core-v1.md`
+9. `drafts/context-v1.md`
+10. `drafts/tools-v1.md`
+11. `drafts/coordination-v1.md`
+12. `drafts/channels-v1.md`
+13. `drafts/http-binding-v1.md`
+14. `drafts/stream-binding-v1.md`
+15. `drafts/conformance-v1.md`
+16. `CONFORMANCE_SYSTEM.md`
+17. `SPEC_METHOD.md`
+18. `SPEC_REVIEW_CHECKLIST.md`
+19. `STATUS.md`
 
-Use the following words literally:
+## Repository Layout
 
-- `MUST`
-- `MUST NOT`
-- `SHOULD`
-- `SHOULD NOT`
-- `MAY`
+- `drafts/` — draft specification and binding docs
+- `CHARTER.md` — protocol goals and modular surface boundaries
+- `V1_TARGET.md` — `v1` endpoint, non-goals, and closure criteria
+- `FIRST_RUST_CLAIMANT_SCOPE.md` — fixed scope for the first Rust claimant
+- `WORKING_DECISIONS.md` — recurring project decisions and working sequence
+- `SURFACE_MATRIX.md` — current surface ownership and completeness
+- `SPEC_LIFECYCLE.md` — repository-level protocol authoring lifecycle
+- `CONFORMANCE_SYSTEM.md` — black-box compliance model and artifact system
+- `SPEC_METHOD.md` — classification and authoring method for protocol law
+- `VOCABULARY.md` — canonical protocol terms and forbidden synonyms
+- `SPEC_REVIEW_CHECKLIST.md` — review gate for protocol-law changes
+- `conformance/` — versioned vectors, traces, claims, and reports
+- `scripts/lint-docs.sh` — terminology and header lint
+- `STATUS.md` — document list and maturity state
+- `CONTRIBUTING.md` — public contribution and writing rules
+- `AGENTS.md` — repo-local agent instructions
 
-Use them only for normative requirements.
+## Protocol Rules
 
-Examples are informative by default unless explicitly marked as canonical conformance vectors.
-Examples should be rare.
-
-## Conformance Depth
-
-- `MUST` and `MUST NOT` should track visible conformance hooks such as vectors, negative paths,
-  state tables, or binding tests.
-- If a rule cannot yet be judged for compliance, it should usually stay out of hard law for now.
-- Prefer profile-based compliance claims over one oversized compliance badge.
-
-## Protocol Doc Kinds
-
-`starla-protocol` docs should be classified as one of:
-
-- `Core Law` — transport-independent semantic rules
-- `Binding` — transport mapping such as HTTP or SSE
-- `Conformance` — pass or fail compliance material
-
-## Suggested Sections
-
-### Core Law
-
-1. `## Scope`
-2. `## Compliance Profiles`
-3. `## Terminology`
-4. `## Semantic Model`
-5. `## State Machines / Invariants`
-6. `## Operations`
-7. `## Event Model`
-8. `## Error Model`
-9. `## Security / Policy Semantics`
-10. `## Versioning / Extensions`
-11. `## Conformance Hooks`
-
-### Binding
-
-1. `## Scope`
-2. `## Binding Rules`
-3. `## Resource Or Message Mapping`
-4. `## Transport Errors`
-5. `## Versioning / Negotiation`
-6. `## Conformance Hooks`
-
-### Conformance
-
-1. `## Scope`
-2. `## Compliance Targets`
-3. `## Required Vectors`
-4. `## Negative Paths`
-5. `## Event Trace Rules`
-6. `## Reporting`
-
-If a section does not materially apply, write `N/A — reason`.
-
-## States
-
-Use:
-
-- `Draft`
-- `Active`
-- `Archived`
-
-## Relationship To Other Docs
-
-- product docs define what Otto is trying to be
-- protocol docs define what compliant implementations must do
-- design docs define how Otto's Rust reference implementation is structured
-- plandocs define execution and migration work
+- normative text defines externally observable behavior only
+- context, coordination, execution, and references belong in protocol law
+- channels are a first-class protocol concern, but not part of minimal `Core v1` by default
+- protocol behavior should be as concrete and deterministic as possible
+- implementation detail stays implementation-defined unless interoperability requires otherwise
+- implementation-defined boundaries should be named explicitly and bounded clearly
+- internal memory, retrieval, ranking, and prompt-assembly strategy stay implementation-defined
+- hands and device control are currently deferred and may remain application-defined
+- `MUST` and `MUST NOT` should have visible conformance hooks
+- examples are informative by default
+- new primary terms should be registered in `VOCABULARY.md` before first normative use

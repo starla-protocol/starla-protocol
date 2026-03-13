@@ -67,6 +67,7 @@ claims against that specification.
 - `SPEC_REVIEW_CHECKLIST.md` — review gate for protocol-law changes
 - `conformance/` — versioned vectors, traces, claims, and reports
 - `scripts/lint-docs.sh` — terminology and header lint
+- `scripts/run-core-http-claim.py` — standalone external runner for the seeded `Core` HTTP claim
 - `STATUS.md` — document list and maturity state
 - `CONTRIBUTING.md` — public contribution and writing rules
 - `AGENTS.md` — repo-local agent instructions

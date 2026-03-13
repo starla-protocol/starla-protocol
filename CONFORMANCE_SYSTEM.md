@@ -76,6 +76,9 @@ A conformance report should record:
 - pass or fail result per artifact
 - overall pass or fail decision
 
+Standalone conformance runners MAY write these reports directly if they verify only public binding
+behavior.
+
 ## Pass Rule
 
 An implementation passes a claimed profile only if:

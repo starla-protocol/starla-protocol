@@ -53,6 +53,7 @@ First claim target: `Core` over `HTTP Binding v1`
 - `VOCABULARY.md` — canonical term registry
 - `SPEC_REVIEW_CHECKLIST.md` — review gate
 - `scripts/lint-docs.sh` — terminology and header lint
+- `scripts/run-core-http-claim.py` — standalone external runner for the seeded `Core` HTTP claim
 
 ## Planned Surfaces
 
@@ -67,7 +68,7 @@ First claim target: `Core` over `HTTP Binding v1`
 ## Current Focus
 
 - record and review first claimant report for `Core` over `HTTP Binding v1`
-- decide whether to merge or revise `starla-rs` `implement/core-http-claimant`
+- use the standalone external runner for future claimant verification
 - keep deferred boundaries deferred unless `V1_TARGET.md` is revised explicitly
 
 ## Claim Blockers

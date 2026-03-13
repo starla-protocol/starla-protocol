@@ -12,6 +12,21 @@ Each report should record:
 
 Reports should be reproducible from the listed artifacts and bindings.
 
+Standalone external runner:
+
+- `scripts/run-core-http-claim.py`
+
+Example:
+
+```bash
+python3 scripts/run-core-http-claim.py \
+  --base-url http://127.0.0.1:4747 \
+  --implementation-name starla-rs \
+  --implementation-version d8dfccc \
+  --runner-identity scripts/run-core-http-claim.py \
+  --output conformance/v1/reports/starla-rs-core-http-2026-03-13.md
+```
+
 Seed artifact:
 
 - `report-template.md`

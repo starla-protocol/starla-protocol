@@ -4,6 +4,7 @@ Repository state: `Draft-Complete`
 Stable version: none
 Compliance claims:
 - `starla-rs` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
+- `starla-rs` `Core + Tools` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-tools-http-2026-03-13.md`
 - `starla-ex` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-ex-core-http-2026-03-13.md`
 First claim target: `Core` over `HTTP Binding v1`
 Next claim target: `Core + Tools` over `HTTP Binding v1`
@@ -56,6 +57,7 @@ Next claim target: `Core + Tools` over `HTTP Binding v1`
 - `SPEC_REVIEW_CHECKLIST.md` — review gate
 - `scripts/lint-docs.sh` — terminology and header lint
 - `scripts/run-core-http-claim.py` — standalone external runner for the seeded `Core` HTTP claim
+- `scripts/run-core-tools-http-claim.py` — standalone external runner for the seeded `Core + Tools` HTTP claim
 
 ## Planned Surfaces
 
@@ -69,9 +71,8 @@ Next claim target: `Core + Tools` over `HTTP Binding v1`
 
 ## Current Focus
 
-- freeze `Core + Tools` over `HTTP Binding v1` as the next bounded claim target
-- implement the first `Core + Tools` claimant in `starla-rs`
-- use the standalone external runner for future claimant verification
+- port `Core + Tools` over `HTTP Binding v1` to a second implementation
+- use the standalone external runners for future claimant verification
 - keep deferred boundaries deferred unless `V1_TARGET.md` is revised explicitly
 
 ## Claim Blockers

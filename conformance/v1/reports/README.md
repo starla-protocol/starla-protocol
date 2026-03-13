@@ -15,6 +15,7 @@ Reports should be reproducible from the listed artifacts and bindings.
 Standalone external runner:
 
 - `scripts/run-core-http-claim.py`
+- `scripts/run-core-tools-http-claim.py`
 
 Example:
 
@@ -25,6 +26,15 @@ python3 scripts/run-core-http-claim.py \
   --implementation-version d8dfccc \
   --runner-identity scripts/run-core-http-claim.py \
   --output conformance/v1/reports/starla-rs-core-http-2026-03-13.md
+```
+
+```bash
+python3 scripts/run-core-tools-http-claim.py \
+  --base-url http://127.0.0.1:4747 \
+  --implementation-name starla-rs \
+  --implementation-version c7499d6 \
+  --runner-identity scripts/run-core-tools-http-claim.py \
+  --output conformance/v1/reports/starla-rs-core-tools-http-2026-03-13.md
 ```
 
 Seed artifact:
@@ -44,4 +54,5 @@ Next seeded target:
 Recorded reports:
 
 - `starla-rs-core-http-2026-03-13.md`
+- `starla-rs-core-tools-http-2026-03-13.md`
 - `starla-ex-core-http-2026-03-13.md`

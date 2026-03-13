@@ -1,7 +1,7 @@
 # starla-rs Core HTTP 2026-03-13
 
 Implementation Claim: `conformance/v1/claims/core-http-claim-seed.md`
-Runner Identity: `starla-rs/scripts/run-core-http-claim.sh` on branch `implement/core-http-claimant` at commit `a8b6375`
+Runner Identity: `starla-rs/scripts/run-core-http-claim.sh` on branch `implement/core-http-claimant` at commit `91e557b`
 Run Date: `2026-03-13`
 
 ## Vectors Executed
@@ -93,4 +93,6 @@ Run Date: `2026-03-13`
 
 - claimed surface remains `Core` over `HTTP Binding v1`
 - excluded optional surfaces were not exercised
-- this report is branch-specific to `implement/core-http-claimant` at `a8b6375`
+- claimant also supports `submit work` idempotent replay and `idempotency_conflict` behavior on the
+  public binding
+- this report is branch-specific to `implement/core-http-claimant` at `91e557b`

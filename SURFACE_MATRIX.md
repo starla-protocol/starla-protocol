@@ -109,15 +109,14 @@ Current v1 surface ownership and completeness.
 
 ## Current Priority
 
-1. begin claimable-profile proof work
+1. review and accept first claimant report
 2. keep deferred boundaries deferred unless `V1_TARGET.md` is revised
 
 ## Next Deliverables
 
-1. select or build first claimant for `Core` over `HTTP Binding v1`
-2. use `conformance/v1/claims/core-http-claim-seed.md` and
-   `conformance/v1/reports/core-http-report-seed.md` as the first proof scaffold
-3. prove first claim target: `Core` over `HTTP Binding v1`
+1. review `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
+2. decide whether `starla-rs` `implement/core-http-claimant` is ready to merge
+3. only then broaden the claimant or bindings
 
 ## Coherence Rules
 

@@ -2,7 +2,8 @@
 
 Repository state: `Draft-Complete`
 Stable version: none
-Compliance claims: none
+Compliance claims:
+- `starla-rs` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
 First claim target: `Core` over `HTTP Binding v1`
 
 ## Read Order
@@ -65,18 +66,12 @@ First claim target: `Core` over `HTTP Binding v1`
 
 ## Current Focus
 
-- implement against `FIRST_RUST_CLAIMANT_SCOPE.md`
-- select or build first claimant for `Core` over `HTTP Binding v1`
-- prove first claim target: `Core` over `HTTP Binding v1`
-- seed first claim artifacts:
-  - `conformance/v1/claims/core-http-claim-seed.md`
-  - `conformance/v1/reports/core-http-report-seed.md`
+- record and review first claimant report for `Core` over `HTTP Binding v1`
+- decide whether to merge or revise `starla-rs` `implement/core-http-claimant`
 - keep deferred boundaries deferred unless `V1_TARGET.md` is revised explicitly
 
 ## Claim Blockers
 
-- no current sibling implementation is a credible `Core` plus `HTTP Binding v1` claimant without
-  new implementation or adaptation work
 - Otto has no runtime implementation yet
 - OpenFang exposes a different northbound API family
 - ZeroClaw does not expose the `starla-protocol` runtime surface

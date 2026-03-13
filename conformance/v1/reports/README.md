@@ -20,3 +20,7 @@ Seed artifact:
 First seeded target:
 
 - `Core` over `HTTP Binding v1`
+
+Recorded reports:
+
+- `starla-rs-core-http-2026-03-13.md`

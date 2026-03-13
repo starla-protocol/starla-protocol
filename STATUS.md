@@ -6,6 +6,7 @@ Compliance claims:
 - `starla-rs` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-http-2026-03-13.md`
 - `starla-rs` `Core + Tools` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-rs-core-tools-http-2026-03-13.md`
 - `starla-ex` `Core` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-ex-core-http-2026-03-13.md`
+- `starla-ex` `Core + Tools` over `HTTP Binding v1` report recorded at `conformance/v1/reports/starla-ex-core-tools-http-2026-03-13.md`
 First claim target: `Core` over `HTTP Binding v1`
 Next claim target: `Core + Tools` over `HTTP Binding v1`
 
@@ -71,7 +72,7 @@ Next claim target: `Core + Tools` over `HTTP Binding v1`
 
 ## Current Focus
 
-- port `Core + Tools` over `HTTP Binding v1` to a second implementation
+- choose the next bounded claim target after `Core + Tools`
 - use the standalone external runners for future claimant verification
 - keep deferred boundaries deferred unless `V1_TARGET.md` is revised explicitly
 

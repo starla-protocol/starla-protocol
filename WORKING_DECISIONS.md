@@ -36,6 +36,7 @@ Move authoring method into `SPEC_METHOD.md`.
 - `skills` remain application-defined for now.
 - current skill model: prompt packages that may use scripts or shell through the tool surface
 - internal memory remains implementation-defined unless exposed as a protocol surface
+- `Core + Approvals` should be taken before `Core + Channels`
 - memory participates in context construction, but only externally observable results belong in
   protocol law by default
 - terminal business failure and infrastructure failure should remain distinct at the protocol
@@ -58,13 +59,13 @@ Move authoring method into `SPEC_METHOD.md`.
 Current preferred sequence:
 
 1. keep `Core` stable after two recorded `HTTP Binding v1` claimants
-2. implement `Core + Tools` over `HTTP Binding v1` in `starla-rs`
-3. port the same `Core + Tools` claim to `starla-ex`
+2. keep `Core + Tools` stable after two recorded `HTTP Binding v1` claimants
+3. implement `Core + Approvals` over `HTTP Binding v1` in `starla-rs`
 
 Immediate deliverables:
 
-1. freeze `Core + Tools` over `HTTP Binding v1` as a seeded claim
-2. implement the seeded `Core + Tools` claimant in `starla-rs`
+1. freeze `Core + Approvals` over `HTTP Binding v1` as a seeded claim
+2. implement the seeded `Core + Approvals` claimant in `starla-rs`
 3. prove it with a standalone external runner
 
 Working sequencing rule:

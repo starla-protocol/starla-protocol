@@ -41,6 +41,7 @@ Seed artifact:
 
 - `report-template.md`
 - `core-http-report-seed.md`
+- `core-approvals-http-report-seed.md`
 - `core-tools-http-report-seed.md`
 
 First seeded target:
@@ -49,7 +50,7 @@ First seeded target:
 
 Next seeded target:
 
-- `Core + Tools` over `HTTP Binding v1`
+- `Core + Approvals` over `HTTP Binding v1`
 
 Recorded reports:
 
